@@ -1,0 +1,91 @@
+@import '../styles/media-queries';
+
+.bellefair {
+    font-family: 'Bellefair', serif;
+}
+
+.barlow {
+    font-family: 'Barlow', sans-serif;
+}
+
+.barlow-condensed {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.heading1 {
+    @extend .bellefair;
+    font-size: 80px;
+
+    @include medium {
+        font-size: 150px;
+    }
+}
+
+.heading2 {
+    @extend .bellefair;
+    font-size: 100px;
+}
+
+.heading3 {
+    @extend .bellefair;
+    font-size: 24px;
+    line-height: 28px;
+
+    @include medium  {
+        font-size: 40px;
+        line-height: 46px
+    }
+
+    @include large  {
+        font-size: 56px;
+        line-height: 64px
+    }
+}
+
+.heading4 {
+    @extend .bellefair;
+    font-size: 20px;
+
+    @include medium {
+        font-size: 32px;
+    }
+}
+
+.heading5 {
+    @extend .barlow-condensed;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+
+    @include medium {
+        font-size: 28px;
+        letter-spacing: 4.75px;
+    }
+}
+
+.subheading1 {
+    @extend .bellefair;
+    font-size: 28px;
+}
+
+.subheading2 {
+    @extend .barlow-condensed;
+    font-size: 14px;
+    letter-spacing: 2.35px;
+}
+
+.nav-text {
+    @extend .barlow-condensed;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+}
+
+.body-text {
+    @extend .barlow;
+    font-size: 15px;
+    line-height: 25px;
+
+    @include medium {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}

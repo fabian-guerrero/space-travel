@@ -1,0 +1,205 @@
+@import '../../styles/global';
+
+.technology{
+    background-image: url(../../assets/images/background-technology-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+
+    @include medium {
+        background-image: url(../../assets/images/background-technology-tablet.jpg);
+    }
+
+    @include large {
+        background-image: url(../../assets/images/background-technology-desktop.jpg);
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+
+        .description{
+            text-align: center;
+            max-width: 458px;
+            margin: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+            &.active{
+                opacity: 1;
+            }
+
+            @include large {
+                text-align: left;
+                max-width: 515px;
+            }
+
+            .body-text{
+                font-size: 15px;
+                line-height: 24px;
+
+                @include medium  {
+                    font-size: 16px;
+                    line-height: 28px;
+                } 
+            }
+        }
+    }
+
+    .main-wrapper{
+        padding: 136px 20px 0;
+
+        @include medium {
+            padding: 136px 55px 0;
+        }
+        
+        @include large {
+            padding: 212px 165px 0;
+            min-height: 100vh;
+        }
+    }
+
+    .description-wrapper{
+        display: flex;
+        flex-direction: column;
+
+        @include large {
+            flex-direction: row;
+        }
+    }
+
+    .copy-wrapper{
+        position: relative;
+
+        [data-slide='2'],[data-slide='3']{
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .image-wrapper{
+        position: relative;
+
+        [data-slide='2'],[data-slide='3']{
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .slider-controls{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto 44px;
+        align-items: center;
+
+        @include large {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+        }
+    }
+
+    // .main-wrapper{
+    //     padding: 212px 0 0;
+
+    //     @include large {
+    //         padding: 212px 165px 0;
+    //     }
+    // }
+
+    .slide-selector{
+        width: 60px;
+        height: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba($tertiary-color, 0.3);
+        border-radius: 50%;
+        color: $tertiary-color;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 0.2s ease;
+
+        &:not(:last-child){
+            margin-right: 16px;
+        }       
+
+        &.active{
+            background-color: $tertiary-color;
+            color: $primary-color;
+        }
+
+        &:hover{
+            border: 1px solid rgba($tertiary-color, 1);
+        }
+
+        @include large {
+            width: 80px;
+            height: 80px;
+            margin-right: 80px;
+            
+            &:not(:last-child){
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .slide-image{
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        &.active{
+            opacity: 1;
+        }
+    }
+
+    .intro{
+        text-transform: uppercase;
+        margin-bottom: 11px;
+    }
+
+    .body-text{
+        width: 100%;
+
+        @include large {
+            max-width: 444px;
+            margin-right: 156px;
+        }
+    }
+
+    .technology-slider{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        
+        @include large {
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 101px;
+            width: calc(100% + 165px);
+            justify-content: space-between;
+
+        }
+
+        .image-wrapper{            
+            margin: 60px auto 56px;
+            width: 100%;
+
+            @include large {
+                margin: unset;
+                max-width: 515px;
+            }
+        }
+    }
+}

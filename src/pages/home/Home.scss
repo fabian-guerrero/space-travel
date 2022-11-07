@@ -1,0 +1,146 @@
+@import '../../styles/global';
+
+.home {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Home page */
+    background-image: url(../../assets/images/background-home-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    /*End Home page*/
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+
+    @include medium {
+        background-image: url(../../assets/images/background-home-tablet.jpg);
+    }
+
+    @include large {
+        background-image: url(../../assets/images/background-home-desktop.jpg);
+    }
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding: 0 0 48px 0;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    @include medium {
+        //height: 70vh;
+        //justify-content: space-between;
+        //padding: 0 0 90px 0;
+    }
+
+    @include large {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 165px 130px;
+    }
+
+    .paragraph-wrapper {
+        max-width: 470px;
+    }
+
+    .title {
+        text-transform: uppercase;
+        color: $secondary-color;
+        margin: 0;
+
+        @include large {
+            text-align: left;
+        }
+
+        span {
+            color: $tertiary-color;
+        }
+    }
+
+    .description {
+        color: $secondary-color;
+        padding: 0 24px;
+
+        @include large {
+            text-align: left;
+            padding: unset;
+        }
+    }
+
+    .cta-wrapper {
+        padding-top: 35px;
+
+        @include large {
+            padding-top: unset;
+        }
+    }
+
+    .cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $tertiary-color;
+        cursor: pointer;
+        border-radius: 50%;
+        text-transform: uppercase;
+        width: 150px;
+        height: 150px;
+
+        @include medium {
+            width: 242px;
+            height: 242px;
+        }
+
+        @include large {
+            width: 274px;
+            height: 274px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 149px;
+            height: 149px;
+            border-radius: 50%;
+            background-color: rgba($tertiary-color, 0.1);
+            transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+
+            @include medium {
+                width: 241px;
+                height: 241px;
+            }
+
+            @include large {
+                width: 273px;
+                height: 273px;
+            }
+        }
+
+        &:hover {
+            &::before {
+
+                @include medium {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @include large {
+                    width: 450px;
+                    height: 450px;
+                }
+            }
+        }
+    }
+}

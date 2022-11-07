@@ -1,0 +1,13 @@
+@import '../../styles/_colors.scss';
+@import '../../styles/_media-queries.scss';
+
+.page-title {
+    color: $tertiary-color;
+    text-transform: uppercase;
+
+    .number {
+        color: rgba($tertiary-color, 0.3);
+        font-weight: 700;
+        margin-right: 28px;
+    }
+}
