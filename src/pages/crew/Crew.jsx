@@ -48,7 +48,7 @@ class Crew extends Component{
                         </div>     
                         <div className='image-wrapper'>
                         {sliderData.map((slide, index)=>(
-                            <img className={`slide-image ${index+1===1 ? "active" : ""}`} src={slide.images.png} alt={slide.name}  key={index+1}/>
+                            <img className={`slide-image ${index+1===1 ? "active" : ""}`} src={slide.images.png} data-slide={index+1} alt={slide.name}  key={index+1}/>
                         ))}
                         </div>           
                     </div>
