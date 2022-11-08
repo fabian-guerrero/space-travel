@@ -50,7 +50,7 @@ class Technology extends Component{
                         <div className='image-wrapper'>
                             {sliderData.map((slide, index)=>(
                             <picture className={`slide-image ${index+1===1 ? "active" : ""}`} data-slide={index+1} key={index+1}>
-                                <source srcSet={slide.images.portrait} media="(min-width: 1400px)" />
+                                <source srcSet={slide.images.portrait} media="(min-width: 1440px)" />
                                 <img src={slide.images.landscape} alt={slide.name} />
                             </picture>                                  
                             ))}

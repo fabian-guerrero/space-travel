@@ -54,11 +54,11 @@
     }
 
     .main-wrapper{
-        padding: 136px 20px 0;
+        padding: 136px 0 0;
 
-        @include medium {
-            padding: 136px 55px 0;
-        }
+        // @include medium {
+        //     padding: 136px 55px 0;
+        // }
         
         @include large {
             padding: 212px 165px 0;
@@ -83,6 +83,13 @@
             opacity: 0;
             top: 0;
             left: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media only screen and (min-width: 1440px) {
+                left: 0;
+                transform: unset;
+            }
         }
     }
 
@@ -158,9 +165,14 @@
     .slide-image{
         opacity: 0;
         transition: opacity 0.3s ease;
+        width: 100%;
 
         &.active{
             opacity: 1;
+        }
+
+        img{
+            width: 100%;
         }
     }
 
