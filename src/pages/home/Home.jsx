@@ -1,4 +1,5 @@
 import './Home.scss';
+import  { NavLink  } from 'react-router-dom';
 //import MainSection from '../../components/mainSection/MainSection';
 
 function Home() {
@@ -10,7 +11,9 @@ function Home() {
               <p className='description body-text'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
           </div>
           <div className='cta-wrapper'>
-              <div className='cta heading4'>Explore</div>
+          <NavLink to="/destination" >
+            <div className='cta heading4'>Explore</div>
+          </NavLink>
           </div>
       </div>
     </div>

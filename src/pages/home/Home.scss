@@ -85,6 +85,11 @@
         @include large {
             padding-top: unset;
         }
+
+        a{
+            text-decoration: none;
+            color: $primary-color;
+        }
     }
 
     .cta {
