@@ -158,8 +158,13 @@
         &[data-slide='3'],
         &[data-slide='4']{
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
+
+            @include medium{
+                top: 0;
+                bottom: unset;
+            }
         }
     }
 
