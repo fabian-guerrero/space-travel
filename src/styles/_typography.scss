@@ -23,7 +23,18 @@
 
 .heading2 {
     @extend .bellefair;
-    font-size: 100px;
+    font-size: 56px;
+    line-height: 64px;
+
+    @include medium  {
+        font-size: 80px;
+        line-height: 92px
+    }
+
+    @include large  {
+        font-size: 100px; 
+        line-height: 115px
+    }
 }
 
 .heading3 {
